@@ -1,3 +1,5 @@
+using System;
+
 namespace Palindrome
 {
   public class Word
@@ -5,7 +7,19 @@ namespace Palindrome
     // public string InputWord;
     public static bool IsPalindrome(string word)
     {
-      return word.Length >=3;
+      if (word.Length >=3)
+      {
+        // char[] checkArr = word.ToCharArray();
+        char[] charArr = word.ToCharArray();
+        Array.Reverse(charArr);
+        string revString = new string(charArr);
+        return word == revString;
+      }
+      else
+      {
+        return false;
+      }
+      
     }
   }
 }

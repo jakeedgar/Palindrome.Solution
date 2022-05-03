@@ -19,5 +19,19 @@ namespace Palindrome.Tests
       Word testWord = new Word();
       Assert.AreEqual(false, Word.IsPalindrome("to"));
     }
+
+    [TestMethod]
+    public void IsPalindrome_SameWhenReversed_True()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(true, Word.IsPalindrome("racecar"));
+    }
+    
+    [TestMethod]
+    public void IsPalindrome_SameWhenReversed_False()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(false, Word.IsPalindrome("capricorn"));
+    }
   }
 }
