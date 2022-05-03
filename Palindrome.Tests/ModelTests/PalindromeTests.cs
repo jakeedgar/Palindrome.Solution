@@ -33,5 +33,38 @@ namespace Palindrome.Tests
       Word testWord = new Word();
       Assert.AreEqual(false, Word.IsPalindrome("capricorn"));
     }
+
+    [TestMethod]
+    public void IsPalindrome_SameNumberWhenReversed_True()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(true, Word.IsPalindrome("121"));
+    }
+
+    [TestMethod]
+    public void IsPalindromeNoMethod_SameNumberWhenReversed_True()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(true, Word.IsPalindromeNoMethod("racecar"));
+    }
+    [TestMethod]
+    public void IsPalindromeNoMethod_SameNumberWhenReversed_False()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(false, Word.IsPalindromeNoMethod("racecars"));
+    }
+
+    [TestMethod]
+    public void IsPalindromeLooping_SameNumberWhenReversed_True()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(true, Word.IsPalindromeNoMethod("racecar"));
+    }
+    [TestMethod]
+    public void IsPalindromeLooping_SameNumberWhenReversed_False()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(false, Word.IsPalindromeNoMethod("racecars"));
+    }
   }
 }

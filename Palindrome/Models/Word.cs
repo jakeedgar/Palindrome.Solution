@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Palindrome
 {
@@ -9,7 +10,6 @@ namespace Palindrome
     {
       if (word.Length >=3)
       {
-        // char[] checkArr = word.ToCharArray();
         char[] charArr = word.ToCharArray();
         Array.Reverse(charArr);
         string revString = new string(charArr);
@@ -19,7 +19,35 @@ namespace Palindrome
       {
         return false;
       }
-      
+    }
+
+    public static bool IsPalindromeNoMethod(string word)
+    {
+      char[] charArr = word.ToCharArray();
+      List<char> reverseChar = new List<char>(0);
+      for (int i = charArr.Length - 1; i >= 0; i--)
+      {
+        reverseChar.Add(charArr[i]);
+      }
+      string reverseWord = string.Join("", reverseChar); 
+
+      return word == reverseWord;
+    }
+
+    public static bool IsPalindromeLooping(string word)
+    {
+      char[] charArr = word.ToCharArray();
+      for (int i = 0; i < charArr.Length; i++) 
+      {
+        for (int j = charArr.Length -1; j >= 0; j--) 
+        {
+          if (charArr[i] != charArr[j])
+          {
+            return false;
+          } 
+        }
+      }
+      return true;
     }
   }
 }
