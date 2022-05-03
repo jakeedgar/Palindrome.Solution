@@ -72,5 +72,11 @@ namespace Palindrome.Tests
       Word testWord = new Word();
       Assert.AreEqual(true, Word.IsPalindromeLooping("rac e car"));
     }
+    [TestMethod]
+    public void IsPalindromeLooping_WithSingleSpace_True()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(true, Word.IsPalindromeLooping("evil olive"));
+    }
   }
 }

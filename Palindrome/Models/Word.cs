@@ -10,10 +10,11 @@ namespace Palindrome
     {
       if (word.Length >=3)
       {
-        char[] charArr = word.ToCharArray();
+        string noSpaceWord = word.Replace(" ", "");
+        char[] charArr = noSpaceWord.ToCharArray();
         Array.Reverse(charArr);
         string revString = new string(charArr);
-        return word == revString;
+        return noSpaceWord == revString;
       }
       else
       {
@@ -23,7 +24,8 @@ namespace Palindrome
 
     public static bool IsPalindromeNoMethod(string word)
     {
-      char[] charArr = word.ToCharArray();
+      string noSpaceWord = word.Replace(" ", "");
+      char[] charArr = noSpaceWord.ToCharArray();
       List<char> reverseChar = new List<char>(0);
       for (int i = charArr.Length - 1; i >= 0; i--)
       {
@@ -31,12 +33,13 @@ namespace Palindrome
       }
       string reverseWord = string.Join("", reverseChar); 
 
-      return word == reverseWord;
+      return noSpaceWord == reverseWord;
     }
 
     public static bool IsPalindromeLooping(string word)
     {
-      char[] charArr = word.ToCharArray();
+      string noSpaceWord = word.Replace(" ", "");
+      char[] charArr = noSpaceWord.ToCharArray();
       for (int i = 0; i < charArr.Length; i++) 
       {
         if (charArr[i] != charArr[(charArr.Length -1) - i])
