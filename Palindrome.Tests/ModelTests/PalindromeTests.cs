@@ -58,13 +58,19 @@ namespace Palindrome.Tests
     public void IsPalindromeLooping_SameNumberWhenReversed_True()
     {
       Word testWord = new Word();
-      Assert.AreEqual(true, Word.IsPalindromeNoMethod("racecar"));
+      Assert.AreEqual(true, Word.IsPalindromeLooping("racecar"));
     }
     [TestMethod]
     public void IsPalindromeLooping_SameNumberWhenReversed_False()
     {
       Word testWord = new Word();
-      Assert.AreEqual(false, Word.IsPalindromeNoMethod("racecars"));
+      Assert.AreEqual(false, Word.IsPalindromeLooping("racecars"));
+    }
+    [TestMethod]
+    public void IsPalindromeLooping_WithSpace_True()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(true, Word.IsPalindromeLooping("rac e car"));
     }
   }
 }

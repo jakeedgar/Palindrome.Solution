@@ -39,12 +39,9 @@ namespace Palindrome
       char[] charArr = word.ToCharArray();
       for (int i = 0; i < charArr.Length; i++) 
       {
-        for (int j = charArr.Length -1; j >= 0; j--) 
+        if (charArr[i] != charArr[(charArr.Length -1) - i])
         {
-          if (charArr[i] != charArr[j])
-          {
-            return false;
-          } 
+          return false;
         }
       }
       return true;
