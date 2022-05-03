@@ -2057,6 +2057,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Palindrome/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Palindrome.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Palindrome.dll": {}
+        }
       }
     }
   },
@@ -6888,13 +6898,19 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Palindrome/1.0.0": {
+      "type": "project",
+      "path": "../Palindrome/Palindrome.csproj",
+      "msbuildProject": "../Palindrome/Palindrome.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "MSTest.TestAdapter >= 1.3.2",
       "MSTest.TestFramework >= 1.3.2",
-      "Microsoft.NET.Test.Sdk >= 15.9.0"
+      "Microsoft.NET.Test.Sdk >= 15.9.0",
+      "Palindrome >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6921,7 +6937,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/jakeedgar/Desktop/Palindrome.Solution/Palindrome/Palindrome.csproj": {
+              "projectPath": "/Users/jakeedgar/Desktop/Palindrome.Solution/Palindrome/Palindrome.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
